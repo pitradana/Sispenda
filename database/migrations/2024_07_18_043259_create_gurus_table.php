@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('gurus', function (Blueprint $table) {
             $table->id();
-            $table->char('nip', 11)->unique();
+            $table->char('nip', 18)->unique();
             $table->char('nik', 16)->unique();
             $table->string('nama');
             $table->string('tempat_lahir');
