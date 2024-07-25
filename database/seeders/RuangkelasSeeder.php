@@ -21,7 +21,7 @@ class RuangkelasSeeder extends Seeder
             'nama' => 'Ruang 7A',
             'daya_tampung' => 32,
             'kelas_id' => 1,
-            'guru_id' => $faker->numberBetween(1, \App\Models\Guru::count()),
+            'guru_id' => $faker->unique()->numberBetween(1, \App\Models\Guru::count()),
         ]);
 
         RuangKelas::create([

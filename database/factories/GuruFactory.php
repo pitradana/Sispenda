@@ -18,7 +18,7 @@ class GuruFactory extends Factory
     {
 
         $daftar_title =["S.Pd","M.Pd","M.T","M.Ag","S.Ag"];
-        
+
         return [
             'nip' => $this->faker->unique()->numerify('##################'),
             'nik' => $this->faker->unique()->numerify('################'),
@@ -33,9 +33,13 @@ class GuruFactory extends Factory
             'golongan' => $this->faker->randomElement(['IV/a','IV/b','IV/c','IV/d','IV/e']),
             'tmt' => $this->faker->date(),
             'tahun_pengangkatan' => $this->faker->date(),
-            'masa_kerja' => $this->faker->date(),
+            'masa_kerja' => $this->faker->numberBetween(1, 10),
             'mulai_smp' => $this->faker->date(),
             'pendidikan' => $this->faker->randomElement(['SD','SMP','SMA','SMK']),
+            'jurusan' => $this->faker->randomElement(['Pendidikan','Non Pendidikan']),
+            'tgl_kelulusan' => $this->faker->date(),
+            'keterangan' => $this->faker->sentence(),
+            'kelas_id' => $this->faker->numberBetween(1, 10),
         ];
     }
 }

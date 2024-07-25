@@ -16,8 +16,16 @@ class MatapelajaranFactory extends Factory
      */
     public function definition(): array
     {
+        $daftar_matapelajaran = ["Metematika","Bahasa Indonesia","Bahasa Inggris","IPA","IPS","Informatika","Pendidikan Agama","PJOK","Seni Budaya","Pkn"];
+        $kelas_id = $this->faker->numberBetween(1, \App\Models\Kelas::count());
+        $array_guru = \App\Models\Guru::where('kelas_id',$kelas_id)->get('id');
+
         return [
-            //
+            'kode_mapel' => $this->faker->unique()->numerify('####'),
+            'nama' => $this->faker->randomElement($daftar_matapelajaran),
+            'keterangan' => $this->faker->sentence(),
+            'kelas_id' => $kelas_id,
+            'guru_id' => $this->faker->randomElement($array_guru),
         ];
     }
 }

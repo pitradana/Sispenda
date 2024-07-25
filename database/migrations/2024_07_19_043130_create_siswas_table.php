@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->char('nisn', 10)->unique();
             $table->char('nis', 5)->unique();
-            $table->string('name');
+            $table->string('nama');
             $table->string('tempat_lahir');
             $table->date('tgl_lahir');
             $table->string('jk');

@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('golongan');
             $table->date('tmt');
             $table->date('tahun_pengangkatan');
-            $table->date('masa_kerja');
+            $table->interger('masa_kerja');
             $table->date('mulai_smp');
             $table->string('pendidikan');
             $table->string('jurusan');
