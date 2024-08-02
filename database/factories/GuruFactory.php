@@ -25,7 +25,7 @@ class GuruFactory extends Factory
             'nama' => $this->faker->firstName() . ' ' . $this->faker->lastName()." ".
                 $this->faker->randomElement($daftar_title),
             'tempat_lahir' => $this->faker->city(),
-            'tanngal_lahir' => $this->faker->date(),
+            'tgl_lahir' => $this->faker->date(),
             'jk' => $this->faker->randomElement(['L','P']),
             'agama' => $this->faker->randomElement(['Islam','Kristen','Katolik','Hindu','Budha']),
             'no_telp' => $this->faker->phoneNumber(),
@@ -39,7 +39,7 @@ class GuruFactory extends Factory
             'jurusan' => $this->faker->randomElement(['Pendidikan','Non Pendidikan']),
             'tgl_kelulusan' => $this->faker->date(),
             'keterangan' => $this->faker->sentence(),
-            'kelas_id' => $this->faker->numberBetween(1, 10),
+            'kelas_id' => $this->faker->numberBetween(1, 3),
         ];
     }
 }

@@ -22,7 +22,7 @@ class MatapelajaranFactory extends Factory
 
         return [
             'kode_mapel' => $this->faker->unique()->numerify('####'),
-            'nama' => $this->faker->randomElement($daftar_matapelajaran),
+            'nama' => $this->faker->unique()->randomElement($daftar_matapelajaran),
             'keterangan' => $this->faker->sentence(),
             'kelas_id' => $kelas_id,
             'guru_id' => $this->faker->randomElement($array_guru),

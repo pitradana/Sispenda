@@ -12,6 +12,6 @@ class MatapelajaranSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        \App\Models\Matapelajaran::factory()->count(10)->create();
     }
 }

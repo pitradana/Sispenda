@@ -25,6 +25,7 @@ class SiswaFactory extends Factory
             'jk' => $this->faker->randomElement(['L','P']),
             'agama' => $this->faker->randomElement(['Islam','Kristen','Katolik','Hindu','Budha']),
             'status_anak' => $this->faker->randomElement(['Kandung','Tiri']),
+            'sekolah_asal' => $this->faker->city(),
             'nik' => $this->faker->unique()->numerify('################'),
             'alamat' => $this->faker->address(),
             'kelas_id' => $this->faker->numberBetween(1, 3),

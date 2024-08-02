@@ -12,6 +12,6 @@ class SiswaMatapelajaranSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        \App\Models\SiswaMatapelajaran::factory()->count(200)->create();
     }
 }
